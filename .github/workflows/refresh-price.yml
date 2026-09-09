@@ -1,0 +1,47 @@
+name: Refresh live price
+
+on:
+  schedule:
+    # Every 5 minutes -- the realistic floor for GitHub Actions' schedule
+    # trigger; GitHub's own docs note scheduled runs "may be delayed during
+    # periods of high load," so expect jitter, not a metronome. Lives here
+    # (this public repo), not the pipeline's private repo, specifically
+    # because it needs no secret (Luno's ticker is unauthenticated) and this
+    # repo's Actions minutes are unlimited (public repo) -- see README.
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+# Never let two runs write data/ at the same time. Same reasoning as the
+# private repo's workflow: a run that's already mid-write should finish, not
+# be killed mid-flight by a newer trigger.
+concurrency:
+  group: refresh-live-price
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch live price
+        run: node scripts/fetch-price.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data; then
+            echo "No price changes, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "chore: refresh live price"
+          git push
