@@ -1,0 +1,14 @@
+[
+  {
+    "symbol": "BTC",
+    "luno_code": "XBT"
+  },
+  {
+    "symbol": "ETH",
+    "luno_code": "ETH"
+  },
+  {
+    "symbol": "XRP",
+    "luno_code": "XRP"
+  }
+]
