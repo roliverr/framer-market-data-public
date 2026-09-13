@@ -2,11 +2,11 @@
   "_meta": {
     "schema": 1,
     "currency": "MYR",
-    "updated": "2026-09-13T19:32:25.344Z",
+    "updated": "2026-09-13T19:44:31.795Z",
     "source": "Data provided by Luno"
   },
   "BTC": {
-    "price": 315661
+    "price": 315401
   },
   "ETH": {
     "price": 10235
