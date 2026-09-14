@@ -1,18 +1,6 @@
-// Fetches Luno ticker prices only (no CoinMarketCap, no secrets needed) for
-// every currency this repo already publishes core data for, and writes
-// data/<ccy>-price.json. Lives HERE (the public repo), not the pipeline's
-// private repo, specifically because:
-//   - it needs no API key (Luno's ticker is unauthenticated), so there's no
-//     secret to protect by keeping it private, and
-//   - this repo's GitHub Actions minutes are unlimited (public repo), letting
-//     it run every 5 minutes without the private repo's 2,000 free-minutes/
-//     month budget capping the cadence.
-// See ../README.md "Live price refresh".
-//
-// data/<ccy>.json (the core, hourly-ish, CMC+Luno file) is never touched by
-// this script — this only ever writes the separate, additive
-// data/<ccy>-price.json file, so there's no write-race between this workflow
-// and the private repo's publish step.
+// Fetches Luno ticker prices (unauthenticated, no API key required) for every
+// currency this repo already publishes core data for, and writes
+// data/<ccy>-price.json. Never touches data/<ccy>.json.
 
 import { readFile, writeFile, readdir, mkdir } from "node:fs/promises";
 import path from "node:path";

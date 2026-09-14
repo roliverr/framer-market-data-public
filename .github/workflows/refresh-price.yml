@@ -2,18 +2,12 @@ name: Refresh live price
 
 on:
   schedule:
-    # Every 5 minutes -- the realistic floor for GitHub Actions' schedule
-    # trigger; GitHub's own docs note scheduled runs "may be delayed during
-    # periods of high load," so expect jitter, not a metronome. Lives here
-    # (this public repo), not the pipeline's private repo, specifically
-    # because it needs no secret (Luno's ticker is unauthenticated) and this
-    # repo's Actions minutes are unlimited (public repo) -- see README.
+    # Every 5 minutes -- GitHub Actions schedules may run with some jitter.
     - cron: "*/5 * * * *"
   workflow_dispatch: {}
 
-# Never let two runs write data/ at the same time. Same reasoning as the
-# private repo's workflow: a run that's already mid-write should finish, not
-# be killed mid-flight by a newer trigger.
+# Never let two runs write data/ at the same time -- a run that's already
+# mid-write should finish, not be killed mid-flight by a newer trigger.
 concurrency:
   group: refresh-live-price
   cancel-in-progress: false
