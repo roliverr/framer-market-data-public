@@ -2,16 +2,16 @@
   "_meta": {
     "schema": 1,
     "currency": "ZAR",
-    "updated": "2026-09-19T22:33:53.669Z",
+    "updated": "2026-09-19T22:46:08.183Z",
     "source": "Data provided by Luno"
   },
   "BTC": {
-    "price": 1320311
+    "price": 1323432
   },
   "ETH": {
-    "price": 42758
+    "price": 42780
   },
   "XRP": {
-    "price": 22.88
+    "price": 23.01
   }
 }
