@@ -2,11 +2,11 @@
   "_meta": {
     "schema": 1,
     "currency": "NGN",
-    "updated": "2026-09-30T02:56:41.169Z",
+    "updated": "2026-09-30T03:19:23.386Z",
     "source": "Data provided by Luno"
   },
   "BTC": {
-    "price": 114324065
+    "price": 114300970
   },
   "ETH": {
     "price": 3666702
