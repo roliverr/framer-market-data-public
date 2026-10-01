@@ -2,16 +2,16 @@
   "_meta": {
     "schema": 1,
     "currency": "IDR",
-    "updated": "2026-10-01T14:14:10.863Z",
+    "updated": "2026-10-01T14:53:35.131Z",
     "source": "Data provided by CoinMarketCap + Luno"
   },
   "BTC": {
     "symbol": "BTC",
     "name": "Bitcoin",
     "price": 1497490000,
-    "change24h": -0.65383482,
-    "market_cap": 30235339329398720,
-    "volume_24h": 564987937180269.9,
+    "change24h": 0.19369491,
+    "market_cap": 30276506008818190,
+    "volume_24h": 537613823692425.75,
     "circulating_supply": 20091365,
     "ath": 2093428923.6282725,
     "cmc_rank": 1
@@ -20,9 +20,9 @@
     "symbol": "ETH",
     "name": "Ethereum",
     "price": 49950000,
-    "change24h": -0.46862694,
-    "market_cap": 5897425409760112,
-    "volume_24h": 231835763391786.56,
+    "change24h": 0.22372085,
+    "market_cap": 5891792429247269,
+    "volume_24h": 222207967147138.22,
     "circulating_supply": 122095846.23248415,
     "ath": 80416423.25118198,
     "cmc_rank": 2
