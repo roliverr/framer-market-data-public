@@ -2,27 +2,27 @@
   "_meta": {
     "schema": 1,
     "currency": "MYR",
-    "updated": "2026-10-03T10:59:10.749Z",
+    "updated": "2026-10-03T13:26:51.964Z",
     "source": "Data provided by CoinMarketCap + Luno"
   },
   "BTC": {
     "symbol": "BTC",
     "name": "Bitcoin",
-    "price": 347710,
-    "change24h": -1.92041708,
-    "market_cap": 6945912541220.662,
-    "volume_24h": 135075424393.47618,
-    "circulating_supply": 20092821,
+    "price": 348895,
+    "change24h": -2.20120026,
+    "market_cap": 6958534197793.551,
+    "volume_24h": 118562322948.3876,
+    "circulating_supply": 20092881,
     "ath": 531924.8633784833,
     "cmc_rank": 1
   },
   "ETH": {
     "symbol": "ETH",
     "name": "Ethereum",
-    "price": 11016,
-    "change24h": -2.1406332,
-    "market_cap": 1338899336571.486,
-    "volume_24h": 57591479820.029816,
+    "price": 11014,
+    "change24h": -2.65191945,
+    "market_cap": 1335868730982.4631,
+    "volume_24h": 51684084162.836754,
     "circulating_supply": 122101617.28357023,
     "ath": 20941.905892956926,
     "cmc_rank": 2
@@ -30,10 +30,10 @@
   "XRP": {
     "symbol": "XRP",
     "name": "XRP",
-    "price": 6.0954,
-    "change24h": -3.63388512,
-    "market_cap": 382585844357.4188,
-    "volume_24h": 13764338927.40125,
+    "price": 6.1,
+    "change24h": -3.59102443,
+    "market_cap": 382339161381.02094,
+    "volume_24h": 11802743021.388353,
     "circulating_supply": 63092975951,
     "ath": 15.394653284103526,
     "cmc_rank": 5
