@@ -2,11 +2,11 @@
   "_meta": {
     "schema": 1,
     "currency": "IDR",
-    "updated": "2026-10-12T07:16:13.018Z",
+    "updated": "2026-10-12T16:49:43.401Z",
     "source": "Data provided by Luno"
   },
   "BTC": {
-    "price": 1498957000
+    "price": 1485091000
   },
   "ETH": {
     "price": 55000000
